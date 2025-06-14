@@ -1,0 +1,13 @@
+- name: Create group 'bitroidapps'
+  ansible.builtin.group:
+    name: bitroidapps
+    state: present
+
+- name: Create user 'bitroidapps' with home and bash shell
+  ansible.builtin.user:
+    name: bitroidapps
+    group: bitroidapps
+    home: /home/bitroidapps
+    shell: /bin/bash
+    state: present
+    create_home: true
