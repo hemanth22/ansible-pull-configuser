@@ -11,3 +11,4 @@
     shell: /bin/bash
     state: present
     create_home: true
+    password: "{{ bitroidapps | password_hash('sha512') }}"
